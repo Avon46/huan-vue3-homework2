@@ -24,7 +24,7 @@ function login() {
 </script>
 
 <template>
-  <h2>登入</h2>
+  <h2>登入系統</h2>
   <p><input v-model.trim="username" placeholder="帳號"></p>
   <input v-model.trim="password" type="password" placeholder="密碼">
   <p><button @click="login">登入</button></p>
