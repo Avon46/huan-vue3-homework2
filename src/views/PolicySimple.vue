@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import BaseSection from '@/components/BaseSection.vue'
 import PolicySearchForm from '@/components/PolicySearchForm.vue'
 import PolicyResultCard from '@/components/PolicyResultCard.vue'
 const loading = ref(false)
@@ -34,7 +35,14 @@ function searchPolicy(policyNo: string) {
 }
 </script>
 <template>
-    <h2>保單查詢系統</h2>
-    <PolicySearchForm @submit="searchPolicy"></PolicySearchForm>
-    <PolicyResultCard :loading="loading" :message="message" :result="result" />
+    <BaseSection>
+        <template #title>
+            <h2>保單查詢系統</h2>
+        </template>
+
+        <PolicySearchForm @submit="searchPolicy"></PolicySearchForm>
+
+        <PolicyResultCard :loading="loading" :message="message" :result="result" />
+
+    </BaseSection>
 </template>

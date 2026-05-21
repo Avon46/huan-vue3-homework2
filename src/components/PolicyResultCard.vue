@@ -17,5 +17,5 @@ const props = defineProps<{
         <p>姓名:{{ props.result.name }}</p>
         <p>狀態:{{ props.result.status }}</p>
     </div>
-    <p v-else-if="message">{{ props.message }}</p>
+    <p v-else-if="props.message">{{ props.message }}</p>
 </template>

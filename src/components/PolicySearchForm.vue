@@ -8,9 +8,6 @@ const emit = defineEmits<{
     submit: [policyNo: string]
 }>()
 function handlesubmit() {
-    if (!policyForm.policyNo) {
-        return
-    }
     emit('submit', policyForm.policyNo)
 }
 

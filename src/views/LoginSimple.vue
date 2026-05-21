@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import BaseSection from '@/components/BaseSection.vue'
 import { ref } from 'vue'
 const loading = ref(false)
 const username = ref('')
@@ -29,10 +30,18 @@ function login() {
 </script>
 
 <template>
-    <h2>登入系統</h2>
-    <p><input v-model.trim="username" placeholder="帳號"></p>
-    <input v-model.trim="password" type="password" placeholder="密碼">
-    <p><button @click="login">登入</button></p>
-    <p v-if="loading">登入中</p>
-    <p v-else-if="message">{{ message }}</p>
+    <BaseSection>
+        <template #title>
+            登入系統
+        </template>
+
+        <input v-model.trim="username" placeholder="帳號">
+
+        <input v-model.trim="password" type="password" placeholder="密碼">
+
+        <button @click="login">登入</button>
+
+        <p v-if="loading">登入中</p>
+        <p v-else-if="message">{{ message }}</p>
+    </BaseSection>
 </template>

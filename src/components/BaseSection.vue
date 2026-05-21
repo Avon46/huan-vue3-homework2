@@ -12,11 +12,11 @@
 
 <style scoped>
 .base-section {
-    border: 1px solid #ddd;
+    border: 1px solid #dddddd;
     border-radius: 12px;
     padding: 20px;
     margin-bottom: 20px;
-    background-color: #fff;
+    background-color: #ffffff;
 }
 
 .base-section__title {
