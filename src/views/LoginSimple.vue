@@ -30,18 +30,57 @@ function login() {
 </script>
 
 <template>
-    <BaseSection>
+    <base-section>
         <template #title>
-            登入系統
+            <h1>登入系統</h1>
         </template>
+        <input class="form-input" v-model.trim="username" placeholder="帳號">
 
-        <input v-model.trim="username" placeholder="帳號">
+        <input class="form-input" v-model.trim="password" type="password" placeholder="密碼">
 
-        <input v-model.trim="password" type="password" placeholder="密碼">
-
-        <button @click="login">登入</button>
+        <button class="primary-button" @click="login">登入</button>
 
         <p v-if="loading">登入中</p>
-        <p v-else-if="message">{{ message }}</p>
-    </BaseSection>
+        <p v-else-if="message" class="success-message">{{ message }}</p>
+    </base-section>
 </template>
+
+<style scoped>
+.form-input {
+    height: 44px;
+    padding: 0 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+}
+
+.form-input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.primary-button {
+    height: 44px;
+    border: none;
+    border-radius: 10px;
+    background-color: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.primary-button:hover {
+    background-color: #1d4ed8;
+}
+
+.success-message {
+    margin: 4px 0 0;
+    padding: 12px 14px;
+    border-radius: 10px;
+    background-color: #ecfdf5;
+    color: #047857;
+    font-weight: 600;
+}
+</style>

@@ -35,14 +35,12 @@ function searchPolicy(policyNo: string) {
 }
 </script>
 <template>
-    <BaseSection>
+    <base-section>
         <template #title>
             <h2>保單查詢系統</h2>
         </template>
-
         <PolicySearchForm @submit="searchPolicy"></PolicySearchForm>
-
         <PolicyResultCard :loading="loading" :message="message" :result="result" />
-
-    </BaseSection>
+    </base-section>
 </template>
+
