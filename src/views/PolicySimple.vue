@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import BaseSection from '@/components/BaseSection.vue'
 import PolicySearchForm from '@/components/PolicySearchForm.vue'
 import PolicyResultCard from '@/components/PolicyResultCard.vue'
@@ -11,6 +11,14 @@ const result = ref<{
     status: string
 } | null>(null)
 
+const resultProps = computed(() => {
+    return {
+        loading: loading.value,
+        message: message.value,
+        result: result.value
+
+    }
+})
 
 function searchPolicy(policyNo: string) {
     loading.value = true
@@ -40,7 +48,6 @@ function searchPolicy(policyNo: string) {
             <h2>保單查詢系統</h2>
         </template>
         <PolicySearchForm @submit="searchPolicy"></PolicySearchForm>
-        <PolicyResultCard :loading="loading" :message="message" :result="result" />
+        <PolicyResultCard v-bind="resultProps" />
     </base-section>
 </template>
-
