@@ -1,9 +1,5 @@
 <script setup lang="ts">
-type Policy = {
-    policyNo: string,
-    name: string,
-    status: string
-}
+import type { Policy } from '@/types/PolicyType';
 const props = defineProps<{
     loading: boolean
     message: string
@@ -19,11 +15,11 @@ const props = defineProps<{
         </div>
         <div class="result-row">
             <span class="result-label">姓名</span>
-            <span class="result-value">{{ props.result.name }}</span>
+            <span class="result-value">{{ props.result }}</span>
         </div>
         <div class="result-row">
             <span class="result-label">狀態</span>
-            <span class="result-value">狀態:{{ props.result.status }}</span>
+            <span class="result-value">狀態:{{ props.result }}</span>
         </div>
 
 
