@@ -14,12 +14,25 @@ const props = defineProps<{
             <span class="result-value">{{ props.result.policyNo }}</span>
         </div>
         <div class="result-row">
-            <span class="result-label">姓名</span>
-            <span class="result-value">{{ props.result }}</span>
+            <span class="result-label">身分證字號</span>
+            <span class="result-value">{{ props.result.id }}</span>
         </div>
         <div class="result-row">
-            <span class="result-label">狀態</span>
-            <span class="result-value">狀態:{{ props.result }}</span>
+            <span class="result-label">要保人</span>
+            <span class="result-value">{{ props.result.polictHolder }}</span>
+        </div>
+        <div class="result-row">
+            <span class="result-label">被保人</span>
+            <span class="result-value">{{ props.result.insuredPerson }}</span>
+        </div>
+
+        <div class="result-row">
+            <span class="result-label">手機號碼</span>
+            <span class="result-value">{{ props.result.phoneNumber }}</span>
+        </div>
+        <div class="result-row">
+            <span class="result-label">生日</span>
+            <span class="result-value">{{ props.result.birth }}</span>
         </div>
 
 
