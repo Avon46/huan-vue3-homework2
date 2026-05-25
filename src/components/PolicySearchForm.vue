@@ -7,7 +7,7 @@ const policyForm = reactive({
 const emit = defineEmits<{
     submit: [policyNo: string]
 }>()
-function handlesubmit() {
+function handleSubmit() {
     emit('submit', policyForm.policyNo)
 }
 
@@ -16,7 +16,7 @@ function handlesubmit() {
 <template>
     <div class="search-form">
         <input v-model.trim='policyForm.policyNo' class="form-input" placeholder="請輸入保單號碼">
-        <button @click="handlesubmit" class="primary-button">查詢</button>
+        <button @click="handleSubmit" class="primary-button">查詢</button>
     </div>
 </template>
 
