@@ -1,16 +1,9 @@
 import { ref, computed } from "vue";
-
+import type { Policy } from "@/types/PolicyType.ts";
 export function usePolicySearch() {
   const loading = ref(false);
   const message = ref("");
-  const result = ref<{
-    policyNo: string;
-    id: string;
-    insuredPerson: string;
-    polictHolder: string;
-    phoneNumber: string;
-    birth: string;
-  } | null>(null);
+  const result = ref<Policy | null>(null);
 
   const resultProps = computed(() => {
     return {
