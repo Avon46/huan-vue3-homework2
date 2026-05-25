@@ -1,5 +1,4 @@
-
-import{ref,computed} from 'vue'
+import { ref, computed } from "vue";
 
 export function useProductSearch() {
   const loading = ref(false);
@@ -50,6 +49,6 @@ export function useProductSearch() {
     message,
     result,
     resultProps,
-    searchPolicy
-  }
+    searchPolicy,
+  };
 }
