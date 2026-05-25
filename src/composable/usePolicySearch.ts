@@ -28,7 +28,7 @@ export function usePolicySearch() {
         policyNo: "A123",
         id: "A132035958",
         insuredPerson: "王大春",
-        polictHolder: "王曉明",
+        policyHolder: "王曉明",
         phoneNumber: "0922588762",
         birth: "890406",
       };

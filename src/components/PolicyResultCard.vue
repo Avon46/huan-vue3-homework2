@@ -19,7 +19,7 @@ const props = defineProps<{
         </div>
         <div class="result-row">
             <span class="result-label">要保人</span>
-            <span class="result-value">{{ props.result.polictHolder }}</span>
+            <span class="result-value">{{ props.result.policyHolder }}</span>
         </div>
         <div class="result-row">
             <span class="result-label">被保人</span>
