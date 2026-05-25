@@ -1,6 +1,6 @@
 import { ref, computed } from "vue";
 
-export function useProductSearch() {
+export function usePolicySearch() {
   const loading = ref(false);
   const message = ref("");
   const result = ref<{

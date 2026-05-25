@@ -2,8 +2,8 @@
 import BaseSection from '@/components/BaseSection.vue'
 import PolicySearchForm from '@/components/PolicySearchForm.vue'
 import PolicyResultCard from '@/components/PolicyResultCard.vue'
-import { useProductSearch } from '@/composable/usePolicySearch.ts'
-const { resultProps, searchPolicy } = useProductSearch()
+import { usePolicySearch } from '@/composable/usePolicySearch.ts'
+const { resultProps, searchPolicy } = usePolicySearch()
 </script>
 <template>
     <base-section>
